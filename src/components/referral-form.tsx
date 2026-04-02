@@ -5,7 +5,7 @@ import { useState } from "react";
 import { useForm } from "react-hook-form";
 
 import { referralSchema, type ReferralFormData } from "@/lib/referral-schema";
-import { referralServices } from "@/lib/site-content";
+import { referralServices, siteConfig } from "@/lib/site-content";
 
 export function ReferralForm() {
   const [serverState, setServerState] = useState<{
@@ -36,32 +36,37 @@ export function ReferralForm() {
 
   async function onSubmit(values: ReferralFormData) {
     setServerState({ type: "idle" });
-    const response = await fetch("/api/referrals", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(values),
+
+    const body = [
+      `Referrer: ${values.referrerName}`,
+      `Organisation: ${values.organisation}`,
+      `Email: ${values.email}`,
+      `Phone: ${values.phone}`,
+      "",
+      `Participant: ${values.participantName}`,
+      `Date of birth: ${values.participantDob}`,
+      `Address: ${values.address}`,
+      `Services: ${values.services.join(", ")}`,
+      "",
+      "Risk and safety information:",
+      values.riskInformation,
+      "",
+      "Additional notes:",
+      values.notes || "None provided",
+    ].join("\n");
+
+    const mailtoUrl = `mailto:${siteConfig.email}?subject=${encodeURIComponent(`Referral for ${values.participantName}`)}&body=${encodeURIComponent(body)}`;
+
+    setServerState({
+      type: "success",
+      message: "GitHub Pages cannot process server-side form submissions, so this referral opens in your email client for sending to Livora Care.",
     });
 
-    const data = (await response.json()) as {
-      success: boolean;
-      message: string;
-    };
-
-    if (!response.ok || !data.success) {
-      setServerState({
-        type: "error",
-        message: data.message || "The referral could not be submitted.",
-      });
-      return;
+    if (typeof window !== "undefined") {
+      globalThis.open(mailtoUrl, "_self");
     }
 
     reset();
-    setServerState({
-      type: "success",
-      message: data.message,
-    });
   }
 
   return (
@@ -139,7 +144,7 @@ export function ReferralForm() {
           disabled={isSubmitting}
           className="cta-gradient inline-flex items-center justify-center rounded-full px-8 py-4 text-sm font-semibold text-white disabled:cursor-not-allowed disabled:opacity-70"
         >
-          {isSubmitting ? "Submitting..." : "Submit referral"}
+          {isSubmitting ? "Preparing..." : "Send referral by email"}
         </button>
       </div>
     </form>
