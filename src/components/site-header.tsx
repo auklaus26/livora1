@@ -1,15 +1,22 @@
+import Image from "next/image";
 import Link from "next/link";
 
 import { ButtonLink } from "@/components/button-link";
 import { Shell } from "@/components/shell";
 import { navItems } from "@/lib/site-content";
+import livoraLogo from "../../public/livora-logo.png";
 
 export function SiteHeader() {
   return (
     <header className="sticky top-0 z-50 border-b border-[rgba(189,201,202,0.3)] bg-[rgba(251,249,243,0.72)] backdrop-blur-xl">
       <Shell className="flex min-h-20 items-center justify-between gap-6">
-        <Link href="/" className="font-headline text-2xl font-extrabold tracking-tight text-[var(--color-primary)]">
-          Livora Care
+        <Link href="/" className="flex items-center" aria-label="Livora Care home">
+          <Image
+            src={livoraLogo}
+            alt="Livora Care"
+            className="h-18 w-auto"
+            priority
+          />
         </Link>
         <nav className="hidden items-center gap-8 md:flex">
           {navItems.map((item) => (

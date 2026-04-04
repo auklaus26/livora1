@@ -43,7 +43,7 @@ export function SiteFooter() {
         </div>
       </Shell>
       <Shell className="border-t border-[rgba(189,201,202,0.4)] py-5 text-xs uppercase tracking-[0.18em] text-[var(--color-on-surface-variant)]">
-        ? 2026 Livora Care. Registered NDIS Provider. Serving {siteConfig.suburb}.
+        &copy; 2026 Livora Care. Registered NDIS Provider. Serving {siteConfig.suburb}.
       </Shell>
     </footer>
   );
