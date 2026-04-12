@@ -4,7 +4,9 @@ import Link from "next/link";
 import { Shell } from "@/components/shell";
 import { footerLinks, quickContact, siteConfig } from "@/lib/site-content";
 import aboriginalFlag from "../../public/aboriginalflag.jpg";
+import gccLogo from "../../public/GCC_logo.jpg";
 import torresStraitIslanderFlag from "../../public/torresstraightislanderflag.jpg";
+import weHeartNdisLogo from "../../public/WeheartNDIS-logo-short.png";
 
 export function SiteFooter() {
   return (
@@ -35,6 +37,18 @@ export function SiteFooter() {
               Livora Care acknowledges the Traditional Custodians of the lands on which we operate, including the Wurundjeri Woi-wurrung people of the Kulin Nation, and pays respect to Elders past, present and emerging.
             </p>
           </div>
+          <div className="flex flex-wrap items-center justify-center gap-4 pt-3">
+              <Image
+                src={gccLogo}
+                alt="GCC NDIS Certified logo"
+                className="h-14 w-auto rounded-md object-contain"
+              />
+              <Image
+                src={weHeartNdisLogo}
+                alt="We Heart NDIS Registered Provider logo"
+                className="h-14 w-auto rounded-md object-contain"
+              />
+            </div>
         </div>
         <div>
           <p className="mb-4 font-headline text-lg font-bold">Explore</p>

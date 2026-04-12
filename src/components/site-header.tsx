@@ -34,7 +34,7 @@ export function SiteHeader() {
             <Link
               key={item.href}
               href={item.href}
-              className="text-sm font-semibold tracking-tight text-[var(--color-on-surface-variant)] hover:text-[var(--color-primary)]"
+              className="text-lg font-semibold tracking-tight text-[var(--color-on-surface-variant)] hover:text-[var(--color-primary)]"
             >
               {item.label}
             </Link>
