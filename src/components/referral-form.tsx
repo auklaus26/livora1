@@ -59,7 +59,7 @@ export function ReferralForm() {
 
     setServerState({
       type: "success",
-      message: "GitHub Pages cannot process server-side form submissions, so this referral opens in your email client for sending to Livora Care.",
+      message: "This referral opens in your email client so it can be sent directly to Livora Care for review.",
     });
 
     if (typeof window !== "undefined") {
@@ -74,16 +74,16 @@ export function ReferralForm() {
       <section className="rounded-[28px] bg-[var(--color-surface-container-lowest)] p-8 shadow-[var(--shadow-editorial)]">
         <h2 className="font-headline text-2xl font-bold">Referrer details</h2>
         <div className="mt-6 grid gap-5 md:grid-cols-2">
-          <Field label="Full name" error={errors.referrerName?.message}>
+          <Field label="First name and last name" error={errors.referrerName?.message}>
             <input {...register("referrerName")} className={inputClassName} />
           </Field>
-          <Field label="Organisation" error={errors.organisation?.message}>
+          <Field label="Organisation / company" error={errors.organisation?.message}>
             <input {...register("organisation")} className={inputClassName} />
           </Field>
-          <Field label="Email" error={errors.email?.message}>
+          <Field label="Email address" error={errors.email?.message}>
             <input type="email" {...register("email")} className={inputClassName} />
           </Field>
-          <Field label="Phone" error={errors.phone?.message}>
+          <Field label="Phone number" error={errors.phone?.message}>
             <input type="tel" {...register("phone")} className={inputClassName} />
           </Field>
         </div>
@@ -92,13 +92,13 @@ export function ReferralForm() {
       <section className="rounded-[28px] bg-[var(--color-surface-container-lowest)] p-8 shadow-[var(--shadow-editorial)]">
         <h2 className="font-headline text-2xl font-bold">Participant information</h2>
         <div className="mt-6 grid gap-5 md:grid-cols-2">
-          <Field label="Participant name" error={errors.participantName?.message}>
+          <Field label="Participant first name and last name" error={errors.participantName?.message}>
             <input {...register("participantName")} className={inputClassName} />
           </Field>
           <Field label="Date of birth" error={errors.participantDob?.message}>
             <input type="date" {...register("participantDob")} className={inputClassName} />
           </Field>
-          <Field label="Address" error={errors.address?.message} className="md:col-span-2">
+          <Field label="Address / suburb" error={errors.address?.message} className="md:col-span-2">
             <input {...register("address")} className={inputClassName} />
           </Field>
         </div>
@@ -106,6 +106,9 @@ export function ReferralForm() {
 
       <section className="rounded-[28px] bg-[var(--color-surface-container-lowest)] p-8 shadow-[var(--shadow-editorial)]">
         <h2 className="font-headline text-2xl font-bold">Services requested</h2>
+        <p className="mt-3 text-sm leading-7 text-[var(--color-on-surface-variant)]">
+          Select the services the participant is seeking.
+        </p>
         <div className="mt-6 grid gap-4 sm:grid-cols-2">
           {referralServices.map((service) => (
             <label
@@ -123,10 +126,20 @@ export function ReferralForm() {
       <section className="rounded-[28px] bg-[var(--color-surface-container-lowest)] p-8 shadow-[var(--shadow-editorial)]">
         <div className="grid gap-5">
           <Field label="Risk and safety information" error={errors.riskInformation?.message}>
-            <textarea {...register("riskInformation")} rows={5} className={inputClassName} />
+            <textarea
+              {...register("riskInformation")}
+              rows={5}
+              className={inputClassName}
+              placeholder="Include support needs, daily routines, behavioural considerations, current supports or housing information."
+            />
           </Field>
           <Field label="Additional notes" error={errors.notes?.message}>
-            <textarea {...register("notes")} rows={4} className={inputClassName} />
+            <textarea
+              {...register("notes")}
+              rows={4}
+              className={inputClassName}
+              placeholder="Add any other relevant information that may assist Livora Care in reviewing this referral."
+            />
           </Field>
         </div>
       </section>
@@ -144,7 +157,7 @@ export function ReferralForm() {
           disabled={isSubmitting}
           className="cta-gradient inline-flex items-center justify-center rounded-full px-8 py-4 text-sm font-semibold text-white disabled:cursor-not-allowed disabled:opacity-70"
         >
-          {isSubmitting ? "Preparing..." : "Send referral by email"}
+          {isSubmitting ? "Preparing..." : "Submit Referral"}
         </button>
       </div>
     </form>

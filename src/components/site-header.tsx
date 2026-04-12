@@ -41,7 +41,7 @@ export function SiteHeader() {
           ))}
         </nav>
         <div className="hidden md:block">
-          <ButtonLink href="/referrals/new">Book Consultation</ButtonLink>
+          <ButtonLink href="/contact">Book Free Consultation</ButtonLink>
         </div>
         <details ref={mobileMenuRef} className="group md:hidden">
           <summary className="list-none rounded-full bg-[var(--color-surface-container)] px-4 py-2 text-sm font-semibold">
@@ -59,8 +59,8 @@ export function SiteHeader() {
                   {item.label}
                 </Link>
               ))}
-              <ButtonLink href="/referrals/new" onClick={closeMobileMenu} className="mt-2 w-full">
-                Book Consultation
+              <ButtonLink href="/contact" onClick={closeMobileMenu} className="mt-2 w-full">
+                Book Free Consultation
               </ButtonLink>
             </nav>
           </div>

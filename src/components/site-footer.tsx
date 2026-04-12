@@ -15,8 +15,8 @@ export function SiteFooter() {
             Livora Care
           </p>
           <p className="max-w-md text-sm leading-6 text-[var(--color-on-surface-variant)]">
-            Registered NDIS provider delivering Supported Independent Living, in-home support, and responsive referral
-            pathways across {siteConfig.suburb}.
+            Registered NDIS provider delivering Supported Independent Living, daily personal care, household supports,
+            and community participation across {siteConfig.suburb}.
           </p>
           <div className="space-y-1">
             <div className="flex items-center justify-center gap-2">

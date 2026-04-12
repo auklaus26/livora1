@@ -9,22 +9,22 @@ import { ctaStrip, heroVisualLabels, valuePillars } from "@/lib/site-content";
 
 export const metadata: Metadata = {
   title: "About Our Team",
-  description: "Learn about Livora Care's participant-centred philosophy, multidisciplinary leadership, and governance approach.",
+  description: "Learn about Livora Care's multidisciplinary experience across healthcare, research, governance and disability support.",
 };
 
 export default function AboutPage() {
   return (
     <>
       <PageHero
-        eyebrow="Why choose Livora Care"
+        eyebrow="Our Team"
         title={
           <>
-            Multidisciplinary expertise at your <span className="text-[var(--color-primary)] italic">service.</span>
+            A team with <span className="text-[var(--color-primary)] italic">diverse professional experience.</span>
           </>
         }
-        description="Livora Care combines healthcare understanding, service design, and governance discipline to deliver participant-centred support that feels responsive, respectful, and reliable."
-        primaryCta={{ href: "/referrals/new", label: "Get started" }}
-        secondaryCta={{ href: "/services/sil", label: "View services" }}
+        description="Livora Care is supported by a multidisciplinary team with experience across healthcare, disability support, clinical research and organisational management. This combination of expertise helps ensure compassionate service delivery alongside strong governance systems."
+        primaryCta={{ href: "/contact", label: "Start a Conversation" }}
+        secondaryCta={{ href: "/services/sil", label: "View SIL Services" }}
         labels={heroVisualLabels.about}
         accent="warm"
       />
@@ -32,9 +32,9 @@ export default function AboutPage() {
       <section className="section-wash py-20">
         <Shell className="space-y-12">
           <SectionHeading
-            eyebrow="Core pillars"
-            title="A participant-centred philosophy backed by operational discipline."
-            description="The website should communicate warmth, but trust is built by showing how care is governed, coordinated, and continuously improved."
+            eyebrow="Professional Experience"
+            title="Healthcare, research and governance experience working together to support participants."
+            description="Our leadership and operational team brings together experience from healthcare, biomedical research, the healthcare industry and corporate governance to support safe, respectful and participant-centred services."
           />
           <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-4">
             {valuePillars.map((pillar) => (
@@ -48,16 +48,16 @@ export default function AboutPage() {
         <Shell className="grid gap-8 lg:grid-cols-2">
           <div className="rounded-[32px] bg-[var(--color-surface-container)] p-8 shadow-[var(--shadow-editorial)]">
             <SectionHeading
-              eyebrow="Reliability"
-              title="Care plans should feel personal. Systems should feel dependable."
-              description="The strongest message in this prototype set is that Livora is not trying to look like a generic provider. That is useful, but the production copy also needs to state how participants are kept safe, how decisions are made, and how teams stay aligned."
+              eyebrow="Working Together"
+              title="The strength of Livora Care lies in the diversity of our team's experience."
+              description="By combining knowledge from healthcare, research, disability services and organisational management, we are able to approach support delivery from multiple perspectives while staying focused on respectful, reliable and person-centred supports."
             />
           </div>
           <div className="rounded-[32px] bg-[var(--color-surface-container-lowest)] p-8 shadow-[var(--shadow-editorial)]">
             <SectionHeading
-              eyebrow="Expertise"
-              title="Healthcare, operations, and safeguarding working together."
-              description="Use this page to explain leadership capability, values, and standards. It should reassure families and referrers without drifting into abstract brand language."
+              eyebrow="Continuous Learning"
+              title="A culture of continuous improvement and professional development."
+              description="Our team regularly reviews service practices, regulatory requirements and emerging sector knowledge so that supports remain safe, responsive and aligned with best practice."
             />
           </div>
         </Shell>

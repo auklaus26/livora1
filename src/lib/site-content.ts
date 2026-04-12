@@ -36,11 +36,16 @@ export type ValuePillar = {
   icon: LucideIcon;
 };
 
+export type LegalSection = {
+  heading: string;
+  paragraphs: string[];
+};
+
 export const siteConfig = {
   phoneHref: "tel:+61398765432",
   phoneLabel: "(03) 9876 5432",
   email: "hello@livoracare.com.au",
-  suburb: "Greater Melbourne",
+  suburb: "Melbourne, Victoria",
 };
 
 export const navItems: NavItem[] = [
@@ -53,45 +58,45 @@ export const navItems: NavItem[] = [
 
 export const homeServices: FeatureCard[] = [
   {
-    title: "Supported Independent Living",
+    title: "Supported Independent Living (SIL)",
     description:
-      "Shared or individual living with structured support that builds routine, confidence, and long-term independence.",
+      "Structured supports that assist participants to live safely and independently in a shared or supported home environment.",
     icon: House,
   },
   {
-    title: "In-Home Support",
+    title: "Daily Personal Care",
     description:
-      "Daily living assistance delivered with dignity, consistency, and respect for each participant's preferences.",
+      "Respectful assistance with personal routines, mobility, and everyday activities delivered with dignity and care.",
     icon: HeartHandshake,
   },
   {
     title: "Community Participation",
     description:
-      "Social connection, appointments, activities, and transport support designed around meaningful goals.",
+      "Support to access social, recreational, and community activities that build confidence and connection.",
     icon: Users,
   },
   {
-    title: "Collaborative Care Planning",
+    title: "Household Supports",
     description:
-      "Close coordination with families, support coordinators, allied health, and housing partners.",
+      "Help with maintaining a safe and organised home, including cleaning, meal preparation, and laundry.",
     icon: Handshake,
   },
 ];
 
 export const differentiators: FeatureCard[] = [
   {
-    title: "Registered NDIS provider",
-    description: "Clear governance, compliance, and safeguarding frameworks built into daily operations.",
+    title: "Participant dignity and choice",
+    description: "Supports are tailored to each participant's goals, preferences, cultural background, and everyday routines.",
     icon: BadgeCheck,
   },
   {
-    title: "Editorial calm, practical care",
-    description: "A welcoming brand experience backed by reliable service delivery and structured processes.",
+    title: "Reliable and responsive delivery",
+    description: "Professional governance, experienced staff, and dependable service coordination support consistent care.",
     icon: Sparkles,
   },
   {
-    title: "Multidisciplinary leadership",
-    description: "Healthcare, operations, and participant-centred planning working together in one model.",
+    title: "Collaborative professional practice",
+    description: "We work closely with support coordinators, clinicians, families, and allied health professionals.",
     icon: Stethoscope,
   },
 ];
@@ -99,68 +104,72 @@ export const differentiators: FeatureCard[] = [
 export const silSupports: FeatureCard[] = [
   {
     title: "Personal care",
-    description: "Support with hygiene, grooming, dressing, and daily routines without losing autonomy.",
+    description: "Assistance with personal routines that supports dignity, confidence, and day-to-day wellbeing.",
     icon: HeartHandshake,
   },
   {
-    title: "Meal preparation",
-    description: "Collaborative planning and cooking aligned with health needs, culture, and household rhythm.",
+    title: "Daily routines",
+    description: "Structured support that helps participants prepare for the day, maintain routines, and build independence.",
     icon: House,
   },
   {
-    title: "Medication routines",
-    description: "Safe assistance and monitoring according to participant plans and care instructions.",
+    title: "Household responsibilities",
+    description: "Guidance with meal preparation, shared living tasks, and maintaining a safe home environment.",
     icon: ShieldCheck,
   },
   {
     title: "Community engagement",
-    description: "Appointments, social activities, transport, and skill-building beyond the home.",
+    description: "Support to stay connected with appointments, social activities, and meaningful community participation.",
     icon: Users,
   },
 ];
 
 export const referralServices = [
   "Supported Independent Living (SIL)",
-  "In-Home Support",
+  "Assistance with Daily Personal Activities",
+  "Assistance with Daily Life Tasks in Shared Living",
   "Community Participation",
-  "Specialist Disability Accommodation (SDA)",
-  "Complex care / high support",
+  "Development of Daily Living and Life Skills",
+  "Household Tasks",
+  "Transport Assistance",
+  "Group or Centre-Based Activities",
+  "Other",
 ] as const;
 
 export const referralSteps: ProcessStep[] = [
   {
-    title: "Submit the referral",
-    description: "Provide referrer, participant, support, and safety information through the secure online form.",
+    title: "Share participant information",
+    description: "Submit the referral form with participant details, requested supports, and any risk or safety considerations.",
   },
   {
-    title: "Triage within one business day",
-    description: "The intake team reviews fit, clarifies gaps, and confirms urgency or housing requirements.",
+    title: "Discuss suitability together",
+    description: "Our team reviews the referral and contacts the referrer or participant to confirm service suitability and availability.",
   },
   {
-    title: "Match and transition planning",
-    description: "Livora coordinates with the referrer and supports a structured onboarding pathway.",
+    title: "Plan the next steps",
+    description: "Where appropriate, we arrange a free consultation and develop a service agreement and onboarding plan.",
   },
 ];
 
 export const valuePillars: ValuePillar[] = [
   {
-    title: "Healthcare",
-    description: "Clinical awareness and practical support routines aligned to participant wellbeing.",
+    title: "Healthcare and Clinical Experience",
+    description: "Professional experience in healthcare and hospital environments informs safe care practices and participant wellbeing.",
     icon: Stethoscope,
   },
   {
-    title: "Research",
-    description: "Evidence-informed care planning and a bias toward continuous improvement.",
+    title: "Biomedical and Research Expertise",
+    description: "Advanced research backgrounds bring an analytical, evidence-informed approach to governance and service planning.",
     icon: FileText,
   },
   {
-    title: "Industry",
-    description: "Operational discipline that keeps services responsive, sustainable, and accountable.",
+    title: "Healthcare Industry Experience",
+    description: "Regulatory compliance, risk management, and quality assurance experience strengthens accountable service delivery.",
     icon: Building2,
   },
   {
-    title: "Governance",
-    description: "Transparent safeguarding, risk management, and quality oversight at service level.",
+    title: "Corporate Governance",
+    description: "Structured organisational systems, policies, and quality frameworks guide consistent and safe supports.",
     icon: ShieldCheck,
   },
 ];
@@ -170,78 +179,245 @@ export const footerLinks = {
   legal: [
     { href: "/privacy", label: "Privacy Policy" },
     { href: "/participant-rights", label: "Participant Rights" },
-    { href: "/complaints", label: "Complaints Process" },
-    { href: "/terms", label: "Terms of Service" },
+    { href: "/complaints", label: "Complaints & Feedback" },
+    { href: "/terms", label: "Terms and Conditions" },
   ],
 };
 
 export const statHighlights = [
   { value: "24/7", label: "responsive support" },
-  { value: "200+", label: "participant journeys supported" },
+  { value: "100+", label: "participant journeys supported" },
   { value: "1 day", label: "target referral triage response" },
 ];
 
 export const ctaStrip = {
-  title: "Start your journey with a free consultation.",
+  title: "Start with a free consultation.",
   description:
-    "Whether you are a participant, family member, or referrer, our team can walk you through the right support pathway.",
-  primary: { href: "/referrals/new", label: "Submit a referral" },
-  secondary: { href: "/services/sil", label: "Explore SIL" },
+    "Participants, families, and referrers can speak with our team about support needs, available services, and the most appropriate next steps.",
+  primary: { href: "/contact", label: "Book a Consultation" },
+  secondary: { href: "/services/sil", label: "Learn More About SIL" },
   tertiary: { href: siteConfig.phoneHref, label: `Call ${siteConfig.phoneLabel}` },
 };
 
-export const legalPageContent: Record<string, { title: string; body: string[] }> = {
+export const legalPageContent: Record<
+  string,
+  { title: string; description?: string; sections: LegalSection[] }
+> = {
   privacy: {
     title: "Privacy Policy",
-    body: [
-      "Livora Care collects only the information needed to respond to enquiries, assess referrals, and deliver disability supports safely.",
-      "Referral and participant information is limited to staff and partners who need it for intake, planning, safeguarding, or service delivery.",
-      "If you need details on correction, access, or retention periods, contact the privacy lead using the contact details in the footer.",
+    description: "Last updated: April 12, 2026",
+    sections: [
+      {
+        heading: "Our Commitment to Privacy",
+        paragraphs: [
+          "Livora Care recognises that privacy and confidentiality are essential components of respectful and ethical service delivery. We are committed to protecting the personal information of participants, families, carers, staff members and community partners who interact with our organisation.",
+          "This Privacy Policy explains how Livora Care collects, uses, stores and protects personal information. Our practices are guided by the Privacy Act 1988 (Cth) and the Australian Privacy Principles, which establish standards for the responsible handling of personal information.",
+        ],
+      },
+      {
+        heading: "Collection of Personal Information",
+        paragraphs: [
+          "Livora Care may collect personal information when individuals interact with our organisation through our website, contact forms, referral submissions, enquiries or feedback channels. The information collected may include contact details, basic identifying information and information voluntarily provided in relation to disability support needs or service enquiries.",
+          "Where individuals choose to submit information through the Livora Care website, they do so voluntarily. We only collect information that is reasonably necessary to respond to enquiries, process referrals, or improve the accessibility and effectiveness of our services.",
+        ],
+      },
+      {
+        heading: "Use of Personal Information",
+        paragraphs: [
+          "Personal information collected through the Livora Care website may be used to respond to enquiries, communicate with individuals regarding services, process referrals or feedback submissions, and improve the way our organisation delivers services and communicates with the community.",
+          "Livora Care uses personal information responsibly and only for purposes that are directly related to our service operations and organisational responsibilities. We are committed to ensuring that information is used in ways that respect the dignity and privacy of individuals who engage with our organisation.",
+        ],
+      },
+      {
+        heading: "Disclosure of Personal Information",
+        paragraphs: [
+          "Livora Care respects the confidentiality of personal information and does not sell or trade personal information. In limited circumstances, information may be shared with authorised staff members or service partners where this is necessary to respond to enquiries, facilitate service coordination or comply with legal obligations.",
+          "Any sharing of personal information is carried out in a manner that prioritises privacy protection and limits disclosure to what is reasonably required.",
+        ],
+      },
+      {
+        heading: "Website Data and Analytics",
+        paragraphs: [
+          "Like many websites, the Livora Care website may collect limited anonymous data to help us understand how visitors use the website. This information may include technical data such as browser type, pages visited or general usage patterns.",
+          "This information is used to improve website functionality and accessibility. The data collected through website analytics does not personally identify individual visitors.",
+        ],
+      },
+      {
+        heading: "Data Security",
+        paragraphs: [
+          "Livora Care takes appropriate steps to safeguard personal information against misuse, loss or unauthorised access. We maintain reasonable security measures to protect information collected through our website and ensure that access to information is restricted to authorised personnel.",
+          "Although every effort is made to maintain security, no internet transmission can be guaranteed to be completely secure. Individuals who choose to provide personal information online do so with an understanding of these limitations.",
+        ],
+      },
+      {
+        heading: "Access and Correction",
+        paragraphs: [
+          "Individuals have the right to request access to personal information held about them and to request corrections where necessary. Livora Care encourages individuals to contact us if they believe information we hold may be inaccurate or incomplete.",
+          "We will take reasonable steps to respond to such requests in a timely and respectful manner.",
+        ],
+      },
+      {
+        heading: "Privacy Concerns or Complaints",
+        paragraphs: [
+          "Livora Care takes privacy concerns seriously. Individuals who have questions or concerns about the handling of their personal information are encouraged to contact us directly so that the matter can be reviewed and addressed appropriately.",
+          "If a concern cannot be resolved through our organisation, individuals may seek further assistance from the Office of the Australian Information Commissioner (OAIC).",
+        ],
+      },
+      {
+        heading: "Updates to This Policy",
+        paragraphs: [
+          "Livora Care may update this Privacy Policy from time to time to reflect changes in legislation, organisational practices or website functionality. Updated versions will be published on this page.",
+        ],
+      },
+      {
+        heading: "Contact Information",
+        paragraphs: [
+          `If you have any questions about this Privacy Policy or how personal information is handled, please contact Livora Care Pty Ltd in Melbourne, Victoria by email at ${siteConfig.email} or by phone on ${siteConfig.phoneLabel}.`,
+        ],
+      },
     ],
   },
   "participant-rights": {
     title: "Participant Rights",
-    body: [
-      "Participants have the right to dignity, informed choice, privacy, safety, and culturally respectful support.",
-      "Livora Care aims to involve participants, families, and representatives in decisions that affect goals, routines, and support design.",
-      "Feedback, complaints, and advocacy access should be available without fear of disadvantage.",
+    sections: [
+      {
+        heading: "Dignity and Respect",
+        paragraphs: [
+          "Participants have the right to be treated with dignity, respect, fairness and cultural sensitivity in every interaction with Livora Care.",
+          "Supports should promote privacy, autonomy, safety and meaningful participation in everyday life.",
+        ],
+      },
+      {
+        heading: "Choice and Control",
+        paragraphs: [
+          "Participants should be involved in decisions about their supports, routines, goals and the way services are delivered.",
+          "Livora Care aims to work collaboratively with participants, families, representatives and support networks so that services reflect individual preferences and needs.",
+        ],
+      },
+      {
+        heading: "Feedback and Advocacy",
+        paragraphs: [
+          "Participants can raise feedback, complaints or concerns without fear of disadvantage, and they may seek support from an advocate, family member or representative at any time.",
+          "Information about complaints, privacy and safeguarding should remain accessible and easy to understand.",
+        ],
+      },
     ],
   },
   complaints: {
-    title: "Complaints Process",
-    body: [
-      "Concerns can be raised by participants, families, workers, or referrers through phone, email, or the website contact pathway.",
-      "Livora Care acknowledges complaints promptly, investigates proportionately, and communicates actions or outcomes clearly.",
-      "Where appropriate, matters are escalated within governance and safeguarding workflows.",
+    title: "Feedback, Complaints and Suggestions",
+    sections: [
+      {
+        heading: "Your Voice Matters to Us",
+        paragraphs: [
+          "At Livora Care, we believe that listening to participants, families and partners helps us continuously improve our services.",
+          "You are welcome to share feedback about your experience, suggestions for improvement, compliments about staff, or concerns and complaints. All feedback is taken seriously and handled respectfully and confidentially.",
+          "Making a complaint will never affect the supports you receive.",
+        ],
+      },
+      {
+        heading: "How to Contact Us",
+        paragraphs: [
+          `If you prefer to speak with someone directly, you can contact Livora Care in Melbourne, Victoria by phone on ${siteConfig.phoneLabel} or by email at ${siteConfig.email}.`,
+          "You may also choose to submit feedback anonymously through our website contact pathway if you prefer not to identify yourself.",
+        ],
+      },
+      {
+        heading: "What Happens Next",
+        paragraphs: [
+          "A member of the Livora Care team will review your feedback, complaint or concern and respond if contact details have been provided.",
+          "We value your input and use feedback to improve the quality and safety of our services.",
+        ],
+      },
+      {
+        heading: "If You Are Not Satisfied With Our Response",
+        paragraphs: [
+          "If you are not comfortable raising your concern with Livora Care, or if you are not satisfied with our response, you may contact the NDIS Quality and Safeguards Commission.",
+          "NDIS Commission phone: 1800 035 544. Website: www.ndiscommission.gov.au.",
+          "Livora Care promotes a speak-up culture where participants feel safe to raise concerns without fear of retaliation.",
+        ],
+      },
     ],
   },
   terms: {
-    title: "Terms of Service",
-    body: [
-      "Website content is provided for general information and does not replace participant-specific clinical or legal advice.",
-      "Submitting a referral does not guarantee service availability; intake remains subject to capacity, fit, and risk review.",
-      "Livora Care may update website content, pathways, or contact information as services evolve.",
+    title: "Terms and Conditions",
+    description: "Last updated: April 12, 2026",
+    sections: [
+      {
+        heading: "Introduction",
+        paragraphs: [
+          "These Terms and Conditions govern the use of the Livora Care website. By accessing or using this website, you acknowledge that you have read, understood and agree to comply with these Terms and Conditions. If you do not agree with these terms, you should discontinue use of the website.",
+          "The Livora Care website is operated by Livora Care Pty Ltd, an organisation that provides disability support services in Australia. The website is intended to provide general information about our organisation, our services and ways to contact or collaborate with us. The information provided on this website is designed to support participants, families, carers, referrers and community members who wish to learn more about Livora Care.",
+          "Livora Care reserves the right to amend or update these Terms and Conditions at any time. Any changes will be published on this page and will take effect from the date of publication.",
+        ],
+      },
+      {
+        heading: "Purpose and Use of the Website",
+        paragraphs: [
+          "The Livora Care website is intended to provide general information about our disability support services and organisational values. Visitors to this website are welcome to access and use the information for personal, professional or referral purposes provided that the website is used in a lawful and respectful manner.",
+          "Users must not use the website in ways that could damage, disable or impair the operation of the website or interfere with the ability of others to access and use the website. Users must not attempt to gain unauthorised access to any part of the website, associated systems or stored data. Any misuse of the website may result in restricted access and may be reported to relevant authorities where appropriate.",
+        ],
+      },
+      {
+        heading: "Accuracy of Information",
+        paragraphs: [
+          "Livora Care makes reasonable efforts to ensure that the information published on this website is accurate, current and relevant at the time of publication. However, as service environments, regulatory requirements and organisational operations may evolve over time, Livora Care does not guarantee that all information on the website will always remain fully up to date.",
+          "Information provided on the website is intended to serve as general guidance about our services and organisational approach. Visitors should contact Livora Care directly if they require confirmation of specific information relating to service availability, eligibility or support arrangements.",
+        ],
+      },
+      {
+        heading: "Intellectual Property",
+        paragraphs: [
+          "All content available on this website, including written text, logos, images, design elements and branding materials, is the property of Livora Care Pty Ltd unless otherwise stated. This content is protected by applicable intellectual property laws.",
+          "Visitors may access and view website content for personal or informational purposes. However, the reproduction, modification, distribution or publication of website content without the prior written permission of Livora Care is not permitted.",
+        ],
+      },
+      {
+        heading: "External Links",
+        paragraphs: [
+          "The Livora Care website may occasionally contain links to external websites or third-party resources that may be relevant to participants, families or professionals seeking additional information. These links are provided solely for convenience and informational purposes.",
+          "Livora Care does not control or take responsibility for the content, privacy practices or reliability of external websites. Users who choose to access external websites do so at their own discretion.",
+        ],
+      },
+      {
+        heading: "Limitation of Liability",
+        paragraphs: [
+          "While Livora Care takes reasonable care in maintaining the quality and reliability of the information on this website, we cannot guarantee that the website will always be free from technical errors, interruptions or unforeseen issues.",
+          "Livora Care will not be liable for any loss or damage arising from the use of this website, reliance on information provided on the website, or any temporary interruption in website availability.",
+        ],
+      },
+      {
+        heading: "Governing Law",
+        paragraphs: [
+          "These Terms and Conditions are governed by the laws of the State of Victoria, Australia. Any disputes arising in connection with the use of this website will be subject to the jurisdiction of the courts of Victoria.",
+        ],
+      },
+      {
+        heading: "Contact",
+        paragraphs: [
+          `If you have any questions about these Terms and Conditions, you may contact Livora Care Pty Ltd in Melbourne, Victoria by email at ${siteConfig.email} or by phone on ${siteConfig.phoneLabel}.`,
+        ],
+      },
     ],
   },
 };
 
 export const heroVisualLabels = {
-  home: ["Registered NDIS Provider", "Warm, person-centred care", "Melbourne support pathways"],
-  about: ["Healthcare + governance", "Participant-centred philosophy", "Reliable service culture"],
-  sil: ["Modern homes", "Daily living routines", "24-hour support options"],
-  referrers: ["Fast intake", "Collaborative transition planning", "Clear communication"],
-  referral: ["Secure referral pathway", "Structured triage", "Responsive onboarding"],
+  home: ["Registered NDIS Provider", "Person-centred supports", "Melbourne service area"],
+  about: ["Healthcare and research", "Strong governance", "Continuous improvement"],
+  sil: ["Supported living", "Daily routines", "Participant choice"],
+  referrers: ["Responsive communication", "Collaborative care", "Transparent documentation"],
+  referral: ["Safe referral pathway", "Participant-centred intake", "Service suitability review"],
 };
 
 export const quickContact = [
   {
-    title: "Call the intake team",
+    title: "Phone",
     value: siteConfig.phoneLabel,
     href: siteConfig.phoneHref,
     icon: PhoneCall,
   },
   {
-    title: "Email Livora Care",
+    title: "Email",
     value: siteConfig.email,
     href: `mailto:${siteConfig.email}`,
     icon: ArrowRight,

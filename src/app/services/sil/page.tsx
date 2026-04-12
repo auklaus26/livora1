@@ -10,7 +10,7 @@ import { ctaStrip, heroVisualLabels, referralSteps, silSupports } from "@/lib/si
 
 export const metadata: Metadata = {
   title: "Supported Independent Living in Melbourne",
-  description: "Supported Independent Living services in Melbourne with 24-hour support options and coordinated intake.",
+  description: "Person-centred Supported Independent Living services in Melbourne designed to help NDIS participants live safely and independently.",
 };
 
 export default function SilPage() {
@@ -23,9 +23,9 @@ export default function SilPage() {
             Supported Independent Living <span className="text-[var(--color-primary)]">(SIL)</span> in Melbourne.
           </>
         }
-        description="Livora Care delivers person-centred SIL with practical daily living support, 24-hour options where required, and collaborative planning with families and referrers."
-        primaryCta={{ href: "/referrals/new", label: "Check availability" }}
-        secondaryCta={{ href: "/referrers", label: "For referrers" }}
+        description="Person-centred supported living services designed to help NDIS participants live safely, confidently and independently."
+        primaryCta={{ href: "/contact", label: "Book Free Consultation" }}
+        secondaryCta={{ href: "/referrals/new", label: "Refer a Participant" }}
         labels={heroVisualLabels.sil}
       />
 
@@ -33,8 +33,8 @@ export default function SilPage() {
         <Shell className="grid gap-10 lg:grid-cols-[0.9fr_1.1fr]">
           <SectionHeading
             eyebrow="What is SIL"
-            title="Support inside the home, not just a roof overhead."
-            description="This page should explain SIL plainly: help with daily tasks, routines, independence, and household life. The prototype has the right emotional direction, but production content needs plain-language clarity first."
+            title="Supported Independent Living helps participants build independence in a safe and supportive home environment."
+            description="SIL is an NDIS support for participants who need help with daily activities while living in shared or supported accommodation. At Livora Care, SIL is delivered with a strong focus on participant choice, dignity and skill development."
           />
           <div className="grid gap-6 md:grid-cols-2">
             {silSupports.map((item) => (
@@ -49,15 +49,15 @@ export default function SilPage() {
           <div className="rounded-[32px] bg-[linear-gradient(135deg,var(--color-primary),var(--color-primary-container))] p-8 text-white shadow-[var(--shadow-editorial)]">
             <SectionHeading
               eyebrow="24-hour support"
-              title="Peace of mind for high-support environments."
-              description="Where participant needs require active overnight or sleepover arrangements, the site should show that clearly without promising configurations before intake confirms fit."
+              title="Structured support can be delivered across a 24-hour roster when required."
+              description="Morning supports focus on preparing for the day, while afternoon, evening and overnight supports help maintain safety, household routines and community participation."
             />
           </div>
           <div className="rounded-[32px] bg-[var(--color-surface-container-lowest)] p-8 shadow-[var(--shadow-editorial)]">
             <SectionHeading
-              eyebrow="Who this suits"
-              title="Participants who need consistent daily living support and a coordinated household environment."
-              description="Use this section to speak directly to participants, families, and support coordinators about suitability, routines, and referral readiness."
+              eyebrow="Who Can Benefit"
+              title="SIL may suit participants who need regular support with daily living and benefit from a supported environment."
+              description="Participants receiving SIL often need assistance with routines, household management, personal care and social engagement while building confidence and staying connected to their community."
             />
           </div>
         </Shell>
@@ -66,9 +66,9 @@ export default function SilPage() {
       <section className="section-wash py-20">
         <Shell className="space-y-10">
           <SectionHeading
-            eyebrow="Intake process"
-            title="A collaborative pathway from referral to transition."
-            description="SIL decisions are higher stakes than a simple marketing enquiry. The website should show the referral sequence, triage expectations, and the fact that matching and risk review are part of intake."
+            eyebrow="Collaboration and Intake"
+            title="We work closely with participants, families and professional support teams."
+            description="Livora Care collaborates with support coordinators, local area coordinators, occupational therapists, behaviour support practitioners and allied health professionals so that SIL arrangements remain aligned with each participant's NDIS plan and goals."
           />
           <ProcessSteps steps={referralSteps} />
         </Shell>

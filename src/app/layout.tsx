@@ -7,15 +7,15 @@ import { SiteHeader } from "@/components/site-header";
 export const metadata: Metadata = {
   metadataBase: new URL("https://livoracare.com.au"),
   title: {
-    default: "Livora Care | NDIS Disability Supports Melbourne",
+    default: "Livora Care | Supported Independent Living & NDIS Disability Support Melbourne",
     template: "%s | Livora Care",
   },
   description:
-    "Registered NDIS provider delivering Supported Independent Living, in-home support, community access, and collaborative referral pathways across Melbourne.",
+    "Registered NDIS provider delivering Supported Independent Living and person-centred disability supports across Melbourne.",
   openGraph: {
     title: "Livora Care",
     description:
-      "Person-centred disability supports, Supported Independent Living, and referral pathways across Melbourne.",
+      "Supported Independent Living and person-centred NDIS disability supports across Melbourne.",
     type: "website",
   },
 };

@@ -8,7 +8,7 @@ import { heroVisualLabels, quickContact, siteConfig } from "@/lib/site-content";
 
 export const metadata: Metadata = {
   title: "Contact",
-  description: "Contact Livora Care for participant enquiries, referrals, and intake support in Melbourne.",
+  description: "Contact Livora Care to discuss disability supports, referrals and service suitability in Melbourne.",
 };
 
 export default function ContactPage() {
@@ -18,11 +18,11 @@ export default function ContactPage() {
         eyebrow="Contact Livora Care"
         title={
           <>
-            Speak with the team about <span className="text-[var(--color-primary)] italic">support pathways</span> and intake.
+            Get in touch about <span className="text-[var(--color-primary)] italic">support needs</span> and services.
           </>
         }
-        description="Use this page for general enquiries, early intake questions, and support pathway discussions before starting a formal referral."
-        primaryCta={{ href: "/referrals/new", label: "Submit Referral" }}
+        description="Whether you are a participant, family member, support coordinator, allied health professional or community organisation, Livora Care welcomes your enquiry and will respond as soon as possible."
+        primaryCta={{ href: "/referrals/new", label: "Submit a Referral" }}
         secondaryCta={{ href: siteConfig.phoneHref, label: `Call ${siteConfig.phoneLabel}` }}
         labels={heroVisualLabels.referral}
         accent="warm"
@@ -32,8 +32,8 @@ export default function ContactPage() {
         <Shell className="grid gap-8 lg:grid-cols-[0.9fr_1.1fr]">
           <SectionHeading
             eyebrow="Contact"
-            title="Reach Livora through the intake team."
-            description="This page is the non-referral contact destination in the header. It gives families, participants, and professionals a clear place to start before they move into the structured referral form."
+            title="Need the right support or want to learn more about our services?"
+            description="Our team is here to help you, your family, or the participant you support find services that align with goals, needs and NDIS plans, including SIL, daily personal care, community participation, life skills, household supports and transport assistance."
           />
           <div className="grid gap-5 md:grid-cols-2">
             {quickContact.map((item) => (
@@ -58,13 +58,13 @@ export default function ContactPage() {
           <div className="rounded-[32px] bg-[var(--color-surface-container-lowest)] p-8 shadow-[var(--shadow-editorial)] md:flex md:items-center md:justify-between">
             <div className="space-y-3">
               <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[var(--color-tertiary)]">Next step</p>
-              <h2 className="font-headline text-4xl font-extrabold tracking-[-0.03em]">Ready to send participant details?</h2>
+              <h2 className="font-headline text-4xl font-extrabold tracking-[-0.03em]">Prefer to discuss before referring?</h2>
               <p className="max-w-2xl text-lg leading-8 text-[var(--color-on-surface-variant)]">
-                Move from general contact into the structured referral form when you are ready to share support, participant, and safety information.
+                If you would like to discuss a participant before submitting a referral, our team is happy to assist. Your information will be kept confidential and used only to respond to your enquiry.
               </p>
             </div>
             <ButtonLink href="/referrals/new" className="mt-6 md:mt-0">
-              Submit Referral
+              Book a Free Consultation
             </ButtonLink>
           </div>
         </Shell>

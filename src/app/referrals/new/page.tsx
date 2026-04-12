@@ -8,7 +8,7 @@ import { heroVisualLabels, quickContact, referralSteps } from "@/lib/site-conten
 
 export const metadata: Metadata = {
   title: "Referral Form",
-  description: "Submit a referral to Livora Care with participant, support, and safety information for intake triage.",
+  description: "Make a referral to Livora Care for disability supports in Melbourne and share participant information for service review.",
 };
 
 export default function ReferralPage() {
@@ -18,12 +18,12 @@ export default function ReferralPage() {
         eyebrow="Secure professional referral"
         title={
           <>
-            Partnering in <span className="text-[var(--color-primary)] italic">excellence</span> of care.
+            Make a <span className="text-[var(--color-primary)] italic">referral</span> for Livora Care services.
           </>
         }
-        description="Use the online referral form to send participant details, requested supports, and risk information directly to Livora Care's intake pathway."
-        primaryCta={{ href: "#referral-form", label: "Start referral" }}
-        secondaryCta={{ href: "/referrers", label: "View process" }}
+        description="If you are a support coordinator, allied health professional, hospital discharge planner, community organisation or family member, you can refer a participant to Livora Care using the form below. Our team will review the referral and respond promptly to discuss service suitability and availability."
+        primaryCta={{ href: "#referral-form", label: "Start Referral" }}
+        secondaryCta={{ href: "/contact", label: "Book Free Consultation" }}
         labels={heroVisualLabels.referral}
         accent="warm"
       />
@@ -37,12 +37,12 @@ export default function ReferralPage() {
             <div className="rounded-[28px] bg-[var(--color-surface-container)] p-8 shadow-[var(--shadow-editorial)]">
               <SectionHeading
                 eyebrow="What happens next"
-                title="Triage is structured and responsive."
+                title="Our goal is to match the right supports to the participant's needs."
                 description={referralSteps.map((step, index) => `${index + 1}. ${step.title}: ${step.description}`).join(" ")}
               />
             </div>
             <div className="rounded-[28px] bg-[var(--color-surface-container-lowest)] p-8 shadow-[var(--shadow-editorial)]">
-              <p className="font-headline text-2xl font-bold">Need to speak to someone first?</p>
+              <p className="font-headline text-2xl font-bold">Prefer to discuss before referring?</p>
               <div className="mt-5 space-y-4">
                 {quickContact.map((item) => (
                   <a
@@ -60,6 +60,9 @@ export default function ReferralPage() {
                   </a>
                 ))}
               </div>
+              <p className="mt-5 text-sm leading-7 text-[var(--color-on-surface-variant)]">
+                If you would like to discuss a participant before submitting a referral, our team is happy to assist.
+              </p>
             </div>
           </aside>
         </Shell>
