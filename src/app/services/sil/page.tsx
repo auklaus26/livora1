@@ -46,7 +46,7 @@ export default function SilPage() {
 
       <section className="py-20">
         <Shell className="grid gap-8 lg:grid-cols-2">
-          <div className="rounded-[32px] bg-[linear-gradient(135deg,var(--color-primary),var(--color-primary-container))] p-8 text-white shadow-[var(--shadow-editorial)]">
+          <div className="rounded-[32px] bg-[linear-gradient(135deg,var(--color-secondary-container))] p-8 shadow-[var(--shadow-editorial)]">
             <SectionHeading
               eyebrow="24-hour support"
               title="Structured support can be delivered across a 24-hour roster when required."
