@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { useRef } from "react";
 
 import { ButtonLink } from "@/components/button-link";
@@ -11,11 +12,20 @@ import livoraLogo from "../../public/livora-logo.png";
 
 export function SiteHeader() {
   const mobileMenuRef = useRef<HTMLDetailsElement>(null);
+  const pathname = usePathname();
 
   function closeMobileMenu() {
     if (mobileMenuRef.current) {
       mobileMenuRef.current.open = false;
     }
+  }
+
+  function isActivePath(href: string) {
+    if (href === "/") {
+      return pathname === "/";
+    }
+
+    return pathname === href || pathname.startsWith(`${href}/`);
   }
 
   return (
@@ -30,15 +40,24 @@ export function SiteHeader() {
           />
         </Link>
         <nav className="hidden items-center gap-8 md:flex">
-          {navItems.map((item) => (
-            <Link
-              key={item.href}
-              href={item.href}
-              className="text-lg font-semibold tracking-tight text-[var(--color-on-surface-variant)] hover:text-[var(--color-primary)]"
-            >
-              {item.label}
-            </Link>
-          ))}
+          {navItems.map((item) => {
+            const isActive = isActivePath(item.href);
+
+            return (
+              <Link
+                key={item.href}
+                href={item.href}
+                aria-current={isActive ? "page" : undefined}
+                className={`text-lg font-semibold tracking-tight underline decoration-2 underline-offset-8 transition-colors ${
+                  isActive
+                    ? "text-[var(--color-primary)] decoration-[var(--color-primary)]"
+                    : "text-[var(--color-on-surface-variant)] decoration-transparent hover:text-[var(--color-primary)] hover:decoration-[var(--color-primary)]"
+                }`}
+              >
+                {item.label}
+              </Link>
+            );
+          })}
         </nav>
         <div className="hidden md:block">
           <ButtonLink href="/contact">Book Free Consultation</ButtonLink>
@@ -49,16 +68,23 @@ export function SiteHeader() {
           </summary>
           <div className="absolute inset-x-4 top-20 rounded-[24px] bg-[var(--color-surface-container-lowest)] p-5 shadow-[var(--shadow-editorial)]">
             <nav className="flex flex-col gap-4">
-              {navItems.map((item) => (
-                <Link
-                  key={item.href}
-                  href={item.href}
-                  onClick={closeMobileMenu}
-                  className="text-base font-semibold text-[var(--color-on-background)]"
-                >
-                  {item.label}
-                </Link>
-              ))}
+              {navItems.map((item) => {
+                const isActive = isActivePath(item.href);
+
+                return (
+                  <Link
+                    key={item.href}
+                    href={item.href}
+                    onClick={closeMobileMenu}
+                    aria-current={isActive ? "page" : undefined}
+                    className={`text-base font-semibold transition-colors ${
+                      isActive ? "text-[var(--color-primary)] underline underline-offset-4" : "text-[var(--color-on-background)]"
+                    }`}
+                  >
+                    {item.label}
+                  </Link>
+                );
+              })}
               <ButtonLink href="/contact" onClick={closeMobileMenu} className="mt-2 w-full">
                 Book Free Consultation
               </ButtonLink>
