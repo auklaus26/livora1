@@ -6,7 +6,7 @@ import { footerLinks, quickContact, siteConfig } from "@/lib/site-content";
 import aboriginalFlag from "../../public/aboriginalflag.jpg";
 import gccLogo from "../../public/GCC_logo.jpg";
 import torresStraitIslanderFlag from "../../public/torresstraightislanderflag.jpg";
-import weHeartNdisLogo from "../../public/WeheartNDIS-logo-short.png";
+import weHeartNdisLogo from "../../public/WeheartNDIS-logo-long.png";
 
 export function SiteFooter() {
   return (
@@ -37,18 +37,6 @@ export function SiteFooter() {
               Livora Care acknowledges the Traditional Custodians of the lands on which we operate, including the Wurundjeri Woi-wurrung people of the Kulin Nation, and pays respect to Elders past, present and emerging.
             </p>
           </div>
-          <div className="flex flex-wrap items-center justify-center gap-4 pt-3">
-              <Image
-                src={gccLogo}
-                alt="GCC NDIS Certified logo"
-                className="h-14 w-auto rounded-md object-contain"
-              />
-              <Image
-                src={weHeartNdisLogo}
-                alt="We Heart NDIS Registered Provider logo"
-                className="h-14 w-auto rounded-md object-contain"
-              />
-            </div>
         </div>
         <div>
           <p className="mb-4 font-headline text-lg font-bold">Explore</p>
@@ -75,6 +63,18 @@ export function SiteFooter() {
             ))}
           </div>
         </div>
+      </Shell>
+      <Shell className="flex flex-wrap items-center justify-center gap-4 pb-8">
+        <Image
+          src={gccLogo}
+          alt="GCC NDIS Certified logo"
+          className="h-16 w-auto rounded-md object-contain"
+        />
+        <Image
+          src={weHeartNdisLogo}
+          alt="We Heart NDIS Registered Provider logo"
+          className="h-16 w-auto rounded-md object-contain"
+        />
       </Shell>
       <Shell className="border-t border-[rgba(189,201,202,0.4)] py-5 text-xs text-center uppercase tracking-[0.18em] text-[var(--color-on-surface-variant)]">
         &copy; 2026 Livora Care. Registered NDIS Provider. Serving {siteConfig.suburb}.
