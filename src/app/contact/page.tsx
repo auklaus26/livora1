@@ -64,7 +64,7 @@ export default function ContactPage() {
               </p>
             </div>
             <ButtonLink href="/referrals/new" className="mt-6 md:mt-0">
-              Book a Free Consultation
+              Book Free Consultation
             </ButtonLink>
           </div>
         </Shell>

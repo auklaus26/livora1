@@ -40,7 +40,7 @@ export default function HomePage() {
                 icon={service.icon}
                 title={service.title}
                 description={service.description}
-                tone={index === 1 ? "primary" : index === 3 ? "warm" : "light"}
+                tone={index === 1 ? "light" : index === 3 ? "light" : "light"}
               />
             ))}
           </div>
