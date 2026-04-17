@@ -44,7 +44,7 @@ export default function ReferrersPage() {
                 icon={service.icon}
                 title={service.title}
                 description={service.description}
-                tone={index === 0 ? "light" : index === 1 ? "primary" : index === 2 ? "warm" : "light"}
+                tone={index === 0 ? "light" : index === 1 ? "light" : index === 2 ? "light" : "light"}
               />
             ))}
           </div>
