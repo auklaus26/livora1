@@ -194,7 +194,7 @@ export const ctaStrip = {
   title: "Start with a free consultation.",
   description:
     "Participants, families, and referrers can speak with our team about support needs, available services, and the most appropriate next steps.",
-  primary: { href: "/contact", label: "Book a Consultation" },
+  primary: { href: "/contact#free-consultation", label: "Book a Consultation" },
   secondary: { href: "/services/sil", label: "Learn More About SIL" },
   tertiary: { href: siteConfig.phoneHref, label: `Call ${siteConfig.phoneLabel}` },
 };

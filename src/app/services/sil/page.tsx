@@ -24,7 +24,7 @@ export default function SilPage() {
           </>
         }
         description="Person-centred supported living services designed to help NDIS participants live safely, confidently and independently."
-        primaryCta={{ href: "/contact", label: "Book Free Consultation" }}
+        primaryCta={{ href: "/contact#free-consultation", label: "Book Free Consultation" }}
         secondaryCta={{ href: "/referrals/new", label: "Refer a Participant" }}
         labels={heroVisualLabels.sil}
       />

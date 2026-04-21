@@ -20,7 +20,7 @@ export default function HomePage() {
           </>
         }
         description="Livora Care is a registered NDIS provider delivering person-centred disability supports that promote independence, safety and meaningful participation in everyday life. We work closely with participants, families and support coordinators to provide reliable and high-quality supports tailored to each individual's goals."
-        primaryCta={{ href: "/contact", label: "Book Free Consultation" }}
+        primaryCta={{ href: "/contact#free-consultation", label: "Book Free Consultation" }}
         secondaryCta={{ href: "/referrals/new", label: "Refer a Participant" }}
         labels={heroVisualLabels.home}
         aside={<StatStrip stats={statHighlights} />}

@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 
-import { ButtonLink } from "@/components/button-link";
+import { ConsultationForm } from "@/components/consultation-form";
 import { PageHero } from "@/components/page-hero";
 import { SectionHeading } from "@/components/section-heading";
 import { Shell } from "@/components/shell";
@@ -53,19 +53,20 @@ export default function ContactPage() {
         </Shell>
       </section>
 
-      <section className="py-20">
+      <section id="free-consultation" className="scroll-mt-28 py-20">
         <Shell>
-          <div className="rounded-[32px] bg-[var(--color-surface-container-lowest)] p-8 shadow-[var(--shadow-editorial)] md:flex md:items-center md:justify-between">
+          <div className="grid gap-8 rounded-[32px] bg-[var(--color-surface-container-lowest)] p-8 shadow-[var(--shadow-editorial)] lg:grid-cols-[0.85fr_1.15fr] lg:items-start">
             <div className="space-y-3">
-              <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[var(--color-tertiary)]">Next step</p>
+              <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[var(--color-tertiary)]">Free consultation</p>
               <h2 className="font-headline text-4xl font-extrabold tracking-[-0.03em]">Prefer to discuss before referring?</h2>
               <p className="max-w-2xl text-lg leading-8 text-[var(--color-on-surface-variant)]">
-                If you would like to discuss a participant before submitting a referral, our team is happy to assist. Your information will be kept confidential and used only to respond to your enquiry.
+                Share your name, email, phone number, and preferred time. We will prepare your consultation request so it can be sent directly to the Livora Care owner.
+              </p>
+              <p className="text-sm leading-7 text-[var(--color-on-surface-variant)]">
+                Your information will only be used to respond to this enquiry and arrange a suitable time to connect.
               </p>
             </div>
-            <ButtonLink href="/referrals/new" className="mt-6 md:mt-0">
-              Book Free Consultation
-            </ButtonLink>
+            <ConsultationForm />
           </div>
         </Shell>
       </section>

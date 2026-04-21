@@ -23,7 +23,7 @@ export default function ReferralPage() {
         }
         description="If you are a support coordinator, allied health professional, hospital discharge planner, community organisation or family member, you can refer a participant to Livora Care using the form below. Our team will review the referral and respond promptly to discuss service suitability and availability."
         primaryCta={{ href: "#referral-form", label: "Start Referral" }}
-        secondaryCta={{ href: "/contact", label: "Book Free Consultation" }}
+        secondaryCta={{ href: "/contact#free-consultation", label: "Book Free Consultation" }}
         labels={heroVisualLabels.referral}
         accent="warm"
       />
