@@ -16,7 +16,7 @@ export default function HomePage() {
         eyebrow="Registered NDIS provider"
         title={
           <>
-            Supported Independent Living and <span className="text-[var(--color-primary)] italic">NDIS disability supports</span> in Melbourne.
+            <span className="text-[var(--color-primary)] italic">NDIS disability supports</span> in Melbourne.
           </>
         }
         description="Livora Care is a registered NDIS provider delivering person-centred disability supports that promote independence, safety and meaningful participation in everyday life. We work closely with participants, families and support coordinators to provide reliable and high-quality supports tailored to each individual's goals."
@@ -52,7 +52,7 @@ export default function HomePage() {
           <div className="flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
             <SectionHeading
               eyebrow="Why Choose Livora Care"
-              title="Participants and referrers choose Livora Care for safe, reliable and participant-centred supports."
+              title="Participants choose Livora Care for safe, reliable and participant-centred supports."
               description="Our organisation operates in alignment with the NDIS Practice Standards and Code of Conduct, with a strong focus on participant dignity and choice, reliable and responsive service delivery, and collaborative work with support coordinators and clinicians."
             />
             <ButtonLink href="/referrers" variant="tertiary" className="gap-2">

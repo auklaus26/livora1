@@ -42,16 +42,16 @@ export type LegalSection = {
 };
 
 export const siteConfig = {
-  phoneHref: "tel:+61398765432",
-  phoneLabel: "(03) 9876 5432",
-  email: "hello@livoracare.com.au",
+  phoneHref: "tel:+61 0416 914 666",
+  phoneLabel: "+61 0420 706 889",
+  email: "info@livoracare.com.au",
   suburb: "Melbourne, Victoria",
 };
 
 export const navItems: NavItem[] = [
   { href: "/", label: "Home" },
-  { href: "/services/sil", label: "Services" },
-  { href: "/referrers", label: "Referrers" },
+  { href: "/services/sil", label: "NDIS Services" },
+  { href: "/referrers", label: "Referral" },
   { href: "/about", label: "About" },
   { href: "/contact", label: "Contact" },
 ];
@@ -186,8 +186,8 @@ export const footerLinks = {
 
 export const statHighlights = [
   { value: "24/7", label: "responsive support" },
-  { value: "100+", label: "participant journeys supported" },
   { value: "1 day", label: "target referral triage response" },
+  { value: "100%", label: "focus on participant-centred care" },
 ];
 
 export const ctaStrip = {
