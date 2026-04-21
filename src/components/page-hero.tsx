@@ -25,7 +25,7 @@ export function PageHero({
 }) {
   return (
     <section className="overflow-hidden pb-16 pt-16 lg:pb-24 lg:pt-24">
-      <Shell className="grid items-center gap-14 lg:grid-cols-[1.1fr_0.9fr]">
+      <Shell className="grid gap-14 lg:grid-cols-[1.1fr_0.9fr] lg:items-start">
         <div className="space-y-8">
           <div className="inline-flex items-center gap-2 rounded-full bg-[var(--color-secondary-container)] px-4 py-2 text-xs font-semibold uppercase tracking-[0.22em] text-[var(--color-secondary)]">
             <span className="h-2 w-2 animate-pulse rounded-full bg-[var(--color-primary)]" />
