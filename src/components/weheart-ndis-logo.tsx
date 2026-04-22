@@ -8,7 +8,7 @@ export function WeheartNdisLogo({ className }: { className?: string }) {
     <Image
       src={weheartNdisLogo}
       alt="WeheartNDIS logo"
-      className={cn("h-14 w-auto object-contain", className)}
+      className={cn("h-18 w-auto object-contain", className)}
     />
   );
 }

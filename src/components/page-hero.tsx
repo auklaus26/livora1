@@ -41,7 +41,7 @@ export function PageHero({
               {description}
             </p>
           </div>
-          <div className="flex flex-wrap gap-4">
+          <div className="flex flex-wrap items-center gap-4">
             <ButtonLink href={primaryCta.href}>{primaryCta.label}</ButtonLink>
             {secondaryCta ? (
               <ButtonLink href={secondaryCta.href} variant="secondary">
