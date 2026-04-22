@@ -185,9 +185,9 @@ export const footerLinks = {
 };
 
 export const statHighlights = [
-  { value: "24/7", label: "responsive support" },
-  { value: "1 day", label: "target referral triage response" },
-  { value: "100%", label: "focus on participant-centred care" },
+  { value: "24/7", label: "focus on safety dignity and respect" },
+  { value: "1:1", label: "personalised support planning" },
+  { value: "100%", label: "commitment to participant-centred care" },
 ];
 
 export const ctaStrip = {
