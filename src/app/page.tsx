@@ -7,6 +7,7 @@ import { PageHero } from "@/components/page-hero";
 import { SectionHeading } from "@/components/section-heading";
 import { Shell } from "@/components/shell";
 import { StatStrip } from "@/components/stat-strip";
+import { WeheartNdisLogo } from "@/components/weheart-ndis-logo";
 import { ctaStrip, differentiators, heroVisualLabels, homeServices, statHighlights } from "@/lib/site-content";
 
 export default function HomePage() {
@@ -22,6 +23,7 @@ export default function HomePage() {
         description="Livora Care is a registered NDIS provider delivering person-centred disability supports that promote independence, safety and meaningful participation in everyday life. We work closely with participants, families and support coordinators to provide reliable and high-quality supports tailored to each individual's goals."
         primaryCta={{ href: "/contact#free-consultation", label: "Book Free Consultation" }}
         secondaryCta={{ href: "/referrals/new", label: "Refer a Participant" }}
+        ctaAside={<WeheartNdisLogo />}
         labels={heroVisualLabels.home}
         aside={<StatStrip stats={statHighlights} />}
       />

@@ -10,6 +10,7 @@ export function PageHero({
   description,
   primaryCta,
   secondaryCta,
+  ctaAside,
   labels,
   accent,
   aside,
@@ -19,6 +20,7 @@ export function PageHero({
   description: string;
   primaryCta: { href: string; label: string };
   secondaryCta?: { href: string; label: string };
+  ctaAside?: ReactNode;
   labels: string[];
   accent?: "teal" | "warm";
   aside?: ReactNode;
@@ -46,6 +48,7 @@ export function PageHero({
                 {secondaryCta.label}
               </ButtonLink>
             ) : null}
+            {ctaAside}
           </div>
           {aside}
         </div>

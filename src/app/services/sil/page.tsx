@@ -6,6 +6,7 @@ import { PageHero } from "@/components/page-hero";
 import { ProcessSteps } from "@/components/process-steps";
 import { SectionHeading } from "@/components/section-heading";
 import { Shell } from "@/components/shell";
+import { WeheartNdisLogo } from "@/components/weheart-ndis-logo";
 import { ctaStrip, heroVisualLabels, referralSteps, silSupports } from "@/lib/site-content";
 
 export const metadata: Metadata = {
@@ -26,6 +27,7 @@ export default function SilPage() {
         description="Person-centred supported living services designed to help NDIS participants live safely, confidently and independently."
         primaryCta={{ href: "/contact#free-consultation", label: "Book Free Consultation" }}
         secondaryCta={{ href: "/referrals/new", label: "Refer a Participant" }}
+        ctaAside={<WeheartNdisLogo />}
         labels={heroVisualLabels.sil}
       />
 
