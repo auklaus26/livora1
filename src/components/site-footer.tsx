@@ -20,23 +20,6 @@ export function SiteFooter() {
             Registered NDIS provider delivering Supported Independent Living, daily personal care, household supports,
             and community participation across {siteConfig.suburb}.
           </p>
-          <div className="space-y-1">
-            <div className="flex items-center justify-center gap-2">
-              <Image
-                src={aboriginalFlag}
-                alt="Australian Aboriginal Flag"
-                className="h-6 w-auto rounded-sm"
-              />
-              <Image
-                src={torresStraitIslanderFlag}
-                alt="Torres Strait Islander Flag"
-                className="h-6 w-auto rounded-sm"
-              />
-            </div>
-            <p className="max-w-md text-xs leading-6 text-[var(--color-on-surface-variant)]">
-              Livora Care acknowledges the Traditional Custodians of the lands on which we operate, including the Wurundjeri Woi-wurrung people of the Kulin Nation, and pays respect to Elders past, present and emerging.
-            </p>
-          </div>
         </div>
         <div>
           <p className="mb-4 font-headline text-lg font-bold">Explore</p>
@@ -62,6 +45,25 @@ export function SiteFooter() {
               </a>
             ))}
           </div>
+        </div>
+      </Shell>
+      <Shell className="flex flex-wrap items-center justify-center gap-4 pb-8">
+        <div className="space-y-1">
+          <div className="flex items-center justify-center gap-2">
+            <Image
+              src={aboriginalFlag}
+              alt="Australian Aboriginal Flag"
+              className="h-6 w-auto rounded-sm"
+            />
+            <Image
+              src={torresStraitIslanderFlag}
+              alt="Torres Strait Islander Flag"
+              className="h-6 w-auto rounded-sm"
+            />
+          </div>
+          <p className="text-xs leading-6 text-[var(--color-on-surface-variant)]">
+            Livora Care acknowledges the Traditional Custodians of the lands on which we provide supports, including the Wurundjeri Woi-wurrung people of the Kulin Nation, and pays respect to Elders past, present and emerging. We are committed to delivering respectful, inclusive and participant-centred supports that honour culture, dignity, choice and connection to community.
+          </p>
         </div>
       </Shell>
       <Shell className="flex flex-wrap items-center justify-center gap-4 pb-8">
