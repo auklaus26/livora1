@@ -41,6 +41,11 @@ export type LegalSection = {
   paragraphs: string[];
 };
 
+export type FaqItem = {
+  question: string;
+  answer: string;
+};
+
 export const siteConfig = {
   phoneHref: "tel:+61 0416 914 666",
   phoneLabel: "+61 0420 706 889",
@@ -421,5 +426,33 @@ export const quickContact = [
     value: siteConfig.email,
     href: `mailto:${siteConfig.email}`,
     icon: ArrowRight,
+  },
+];
+
+export const contactFaqs: FaqItem[] = [
+  {
+    question: "I’m new to the NDIS. Can Livora Care help me understand how supports work?",
+    answer:
+      "Yes. We can explain how supports are delivered, how services are funded under an NDIS plan, and what types of assistance may suit the participant’s goals and daily needs.",
+  },
+  {
+    question: "Does my family member need to have an NDIS plan before contacting Livora Care?",
+    answer:
+      "No. You are welcome to contact us even if the participant is still applying for the NDIS or waiting for plan approval.",
+  },
+  {
+    question: "How do I know if Livora Care is the right provider for us?",
+    answer:
+      "We offer a free initial consultation where we discuss goals, support needs and preferences so you can decide whether our services are the right fit.",
+  },
+  {
+    question: "Can my family member choose their support workers?",
+    answer:
+      "Yes. Participant choice and control are central principles of the NDIS, and we consider language, gender preference, cultural background and experience when matching workers.",
+  },
+  {
+    question: "What happens after we contact Livora Care?",
+    answer:
+      "A member of our team will learn more about the participant’s situation and support needs, then arrange a consultation and service planning if our services are suitable.",
   },
 ];

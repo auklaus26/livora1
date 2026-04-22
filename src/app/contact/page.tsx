@@ -1,10 +1,11 @@
 import type { Metadata } from "next";
+import { ChevronDown } from "lucide-react";
 
 import { ConsultationForm } from "@/components/consultation-form";
 import { PageHero } from "@/components/page-hero";
 import { SectionHeading } from "@/components/section-heading";
 import { Shell } from "@/components/shell";
-import { heroVisualLabels, quickContact, siteConfig } from "@/lib/site-content";
+import { contactFaqs, heroVisualLabels, quickContact, siteConfig } from "@/lib/site-content";
 
 export const metadata: Metadata = {
   title: "Contact",
@@ -67,6 +68,35 @@ export default function ContactPage() {
               </p>
             </div>
             <ConsultationForm />
+          </div>
+        </Shell>
+      </section>
+
+      <section className="section-wash py-20">
+        <Shell className="space-y-8">
+          <SectionHeading
+            eyebrow="Frequently Asked Questions"
+            title="Get your questions answered"
+            description="Learn more about how Livora Care supports participants, families and referrers when exploring NDIS services."
+          />
+          <div className="space-y-2">
+            {contactFaqs.map((item, index) => (
+              <details
+                key={item.question}
+                open={index === 0}
+                className="group rounded-[32px] border border-[var(--color-outline-variant)]/40 bg-[var(--color-surface-container-lowest)] px-7 py-6 shadow-[var(--shadow-editorial)]"
+              >
+                <summary className="cursor-pointer list-none pr-8 font-headline text-lg font-bold tracking-[-0.02em] text-[var(--color-on-background)] [&::-webkit-details-marker]:hidden">
+                  <span className="relative block pl-8">
+                    <span className="absolute left-0 top-1 flex h-5 w-5 items-center justify-center rounded-full bg-[var(--color-surface-container)] text-[var(--color-primary)] transition-transform duration-200 group-open:rotate-180">
+                      <ChevronDown className="h-3.5 w-3.5" aria-hidden="true" />
+                    </span>
+                    {item.question}
+                  </span>
+                </summary>
+                <p className="pt-5 pl-8 text-lg leading-8 text-[var(--color-on-surface-variant)]">{item.answer}</p>
+              </details>
+            ))}
           </div>
         </Shell>
       </section>
