@@ -97,10 +97,10 @@ export function FeedbackForm() {
           <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[var(--color-tertiary)]">
             Privacy choice
           </p>
-          <p className="mt-3 text-sm leading-7 text-[var(--color-on-surface-variant)]">
+          {/* <p className="mt-3 text-sm leading-7 text-[var(--color-on-surface-variant)]">
             You can send feedback with your contact details or keep it anonymous. If anonymous is selected, we will not
             include phone or email in the prepared message.
-          </p>
+          </p> */}
           <label className="mt-5 flex items-start gap-3 text-sm leading-7 text-[var(--color-on-surface-variant)]">
             <input type="checkbox" {...anonymousField} className="mt-1 h-4 w-4 accent-[var(--color-primary)]" />
             Keep this feedback anonymous
