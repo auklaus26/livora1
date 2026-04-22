@@ -88,9 +88,9 @@ export function ConsultationForm() {
         </Field>
       </div>
 
-      <p className="text-sm leading-7 text-[var(--color-on-surface-variant)]">
+      {/* <p className="text-sm leading-7 text-[var(--color-on-surface-variant)]">
         Choose a preferred call time and we will prepare an email addressed to the Livora Care owner.
-      </p>
+      </p> */}
 
       <div className="flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
         <div aria-live="polite">

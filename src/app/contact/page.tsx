@@ -59,9 +59,9 @@ export default function ContactPage() {
             <div className="space-y-3">
               <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[var(--color-tertiary)]">Free consultation</p>
               <h2 className="font-headline text-4xl font-extrabold tracking-[-0.03em]">Prefer to discuss before referring?</h2>
-              <p className="max-w-2xl text-lg leading-8 text-[var(--color-on-surface-variant)]">
+              {/* <p className="max-w-2xl text-lg leading-8 text-[var(--color-on-surface-variant)]">
                 Share your name, email, phone number, and preferred time. We will prepare your consultation request so it can be sent directly to the Livora Care owner.
-              </p>
+              </p> */}
               <p className="text-sm leading-7 text-[var(--color-on-surface-variant)]">
                 Your information will only be used to respond to this enquiry and arrange a suitable time to connect.
               </p>
