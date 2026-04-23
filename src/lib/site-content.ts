@@ -48,7 +48,7 @@ export type FaqItem = {
 
 export const siteConfig = {
   phoneHref: "tel:+61 0416 914 666",
-  phoneLabel: "+61 0420 706 889",
+  phoneLabel: "+61 0420 551 613",
   email: "info@livoracare.com.au",
   suburb: "Melbourne, Victoria",
 };
@@ -144,15 +144,15 @@ export const referralServices = [
 export const referralSteps: ProcessStep[] = [
   {
     title: "Share participant information",
-    description: "Submit the referral form with participant details, requested supports, and any risk or safety considerations.",
+    description: "Submit referral form with participant details, supports, and risks",
   },
   {
     title: "Discuss suitability together",
-    description: "Our team reviews the referral and contacts the referrer or participant to confirm service suitability and availability.",
+    description: "We review suitability and confirm availability.",
   },
   {
     title: "Plan the next steps",
-    description: "Where appropriate, we arrange a free consultation and develop a service agreement and onboarding plan.",
+    description: "Arrange free consultation and prepare service agreement and onboarding plan.",
   },
 ];
 

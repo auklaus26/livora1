@@ -83,7 +83,7 @@ export default function ContactPage() {
             {contactFaqs.map((item, index) => (
               <details
                 key={item.question}
-                open={index === 0}
+                // open={index === 0}
                 className="group rounded-[32px] border border-[var(--color-outline-variant)]/40 bg-[var(--color-surface-container-lowest)] px-7 py-6 shadow-[var(--shadow-editorial)]"
               >
                 <summary className="cursor-pointer list-none pr-8 font-headline text-lg font-bold tracking-[-0.02em] text-[var(--color-on-background)] [&::-webkit-details-marker]:hidden">
