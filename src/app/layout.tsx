@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 
+import { PageBackground } from "@/components/page-background";
 import { SiteFooter } from "@/components/site-footer";
 import { SiteHeader } from "@/components/site-header";
 
@@ -28,9 +29,12 @@ export default function RootLayout({
   return (
     <html lang="en" className="h-full scroll-smooth">
       <body className="min-h-full bg-[var(--color-background)] text-[var(--color-on-background)] antialiased">
-        <SiteHeader />
-        <main>{children}</main>
-        <SiteFooter />
+        <PageBackground />
+        <div className="relative isolate z-10">
+          <SiteHeader />
+          <main>{children}</main>
+          <SiteFooter />
+        </div>
       </body>
     </html>
   );

@@ -23,7 +23,7 @@ export function FeatureCard({
         : "bg-[var(--color-surface-container-lowest)] text-[var(--color-on-background)]";
 
   const descriptionClass =
-    tone === "light" || tone === "aqua" ? "text-[var(--color-on-surface-variant)]" : "text-white/88";
+    tone === "light" || tone === "aqua" ? "text-[var(--color-body-copy)]" : "text-white/88";
 
   return (
     <article className={`rounded-[28px] p-8 shadow-[var(--shadow-editorial)] ${toneClass}`}>

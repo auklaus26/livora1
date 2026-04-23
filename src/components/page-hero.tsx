@@ -37,7 +37,7 @@ export function PageHero({
             <h1 className="font-headline text-5xl font-extrabold leading-[1.02] tracking-[-0.04em] text-balance md:text-7xl">
               {title}
             </h1>
-            <p className="max-w-2xl text-lg leading-8 text-[var(--color-on-surface-variant)] text-pretty md:text-xl">
+            <p className="max-w-2xl text-lg leading-8 text-[var(--color-body-copy)] text-pretty md:text-xl">
               {description}
             </p>
           </div>

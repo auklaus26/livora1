@@ -80,7 +80,7 @@ export default function ContactPage() {
             description="Learn more about how Livora Care supports participants, families and referrers when exploring NDIS services."
           />
           <div className="space-y-2">
-            {contactFaqs.map((item, index) => (
+            {contactFaqs.map((item) => (
               <details
                 key={item.question}
                 // open={index === 0}

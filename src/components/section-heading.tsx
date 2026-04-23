@@ -20,7 +20,7 @@ export function SectionHeading({
       ) : null}
       <h2 className="font-headline text-4xl font-extrabold tracking-[-0.03em] text-balance md:text-5xl">{title}</h2>
       {description ? (
-        <p className="text-lg leading-8 text-[var(--color-on-surface-variant)] text-pretty">{description}</p>
+        <p className="text-lg leading-8 text-[var(--color-body-copy)] text-pretty">{description}</p>
       ) : null}
     </div>
   );

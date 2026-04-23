@@ -12,7 +12,7 @@ export function ProcessSteps({ steps }: { steps: ProcessStep[] }) {
             {index + 1}
           </div>
           <h3 className="font-headline text-2xl font-bold">{step.title}</h3>
-          <p className="mt-4 text-sm leading-7 text-[var(--color-on-surface-variant)]">{step.description}</p>
+          <p className="mt-4 text-sm leading-7 text-[var(--color-body-copy)]">{step.description}</p>
         </article>
       ))}
     </div>

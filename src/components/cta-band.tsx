@@ -22,7 +22,7 @@ export function CtaBand({
             <div className="space-y-5">
               <p className="text-xs font-semibold uppercase tracking-[0.28em] text-[var(--color-primary)]">Care pathway</p>
               <h2 className="font-headline text-4xl font-extrabold tracking-[-0.03em] text-balance md:text-5xl">{title}</h2>
-              <p className="max-w-2xl text-lg leading-8 text-[var(--color-on-surface-variant)]">{description}</p>
+              <p className="max-w-2xl text-lg leading-8 text-[var(--color-body-copy)]">{description}</p>
             </div>
             <div className="flex flex-col gap-3 md:flex-row md:flex-wrap md:justify-end">
               <ButtonLink href={primary.href}>{primary.label}</ButtonLink>
