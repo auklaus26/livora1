@@ -1,6 +1,47 @@
 import { SectionHeading } from "@/components/section-heading";
 import { Shell } from "@/components/shell";
 
+const contactLinkPattern =
+  /([a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}|(?:https?:\/\/)?www\.[a-z0-9.-]+\.[a-z]{2,}(?:\/[^\s]*)?|\+?\d[\d\s().-]{6,}\d)/gi;
+
+function getContactHref(value: string) {
+  if (value.includes("@")) {
+    return `mailto:${value}`;
+  }
+
+  if (value.toLowerCase().startsWith("http")) {
+    return value;
+  }
+
+  if (value.toLowerCase().startsWith("www.")) {
+    return `https://${value}`;
+  }
+
+  return `tel:${value.replace(/[^\d+]/g, "")}`;
+}
+
+function renderLinkedParagraph(paragraph: string) {
+  return paragraph.split(contactLinkPattern).map((part, index) => {
+    if (!part.match(contactLinkPattern)) {
+      return part;
+    }
+
+    const href = getContactHref(part);
+    const isExternalLink = href.startsWith("http");
+
+    return (
+      <a
+        key={`${part}-${index}`}
+        href={href}
+        className="font-semibold text-[var(--color-primary)] underline underline-offset-4 transition hover:text-[var(--color-primary-fixed-dim)]"
+        {...(isExternalLink ? { target: "_blank", rel: "noreferrer" } : {})}
+      >
+        {part}
+      </a>
+    );
+  });
+}
+
 export function LegalContent({
   content,
 }: {
@@ -17,7 +58,7 @@ export function LegalContent({
               <div key={section.heading} className="space-y-4">
                 <h3 className="font-headline text-2xl font-bold text-[var(--color-on-background)]">{section.heading}</h3>
                 {section.paragraphs.map((paragraph) => (
-                  <p key={paragraph}>{paragraph}</p>
+                  <p key={paragraph}>{renderLinkedParagraph(paragraph)}</p>
                 ))}
               </div>
             ))}

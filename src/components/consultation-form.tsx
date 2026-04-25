@@ -2,7 +2,7 @@
 
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useState } from "react";
-import { useForm } from "react-hook-form";
+import { useForm, useWatch } from "react-hook-form";
 
 import { consultationSchema, type ConsultationFormData } from "@/lib/consultation-schema";
 import { siteConfig } from "@/lib/site-content";
@@ -14,6 +14,7 @@ export function ConsultationForm() {
   }>({ type: "idle" });
 
   const {
+    control,
     register,
     handleSubmit,
     formState: { errors, isSubmitting },
@@ -27,6 +28,7 @@ export function ConsultationForm() {
       preferredTime: "",
     },
   });
+  const preferredTimeValue = useWatch({ control, name: "preferredTime" });
 
   async function onSubmit(values: ConsultationFormData) {
     setServerState({ type: "idle" });
@@ -79,12 +81,19 @@ export function ConsultationForm() {
           <input type="tel" {...register("phone")} className={inputClassName} autoComplete="tel" />
         </Field>
         <Field label="Preferred time" error={errors.preferredTime?.message}>
-          <input
-            type="datetime-local"
-            {...register("preferredTime")}
-            className={inputClassName}
-            min={getMinimumDateTime()}
-          />
+          <div className="relative">
+            <input
+              type="datetime-local"
+              {...register("preferredTime")}
+              className={`${inputClassName} ${preferredTimeValue ? "" : "datetime-empty"}`}
+              min={getMinimumDateTime()}
+            />
+            {preferredTimeValue ? null : (
+              <span className="pointer-events-none absolute inset-y-0 left-4 flex items-center text-sm text-[var(--color-on-background)]">
+                dd/mm/yyyy --:--
+              </span>
+            )}
+          </div>
         </Field>
       </div>
 
@@ -122,7 +131,7 @@ function Field({
   children: React.ReactNode;
 }) {
   return (
-    <label>
+    <label className="block min-w-0">
       <span className="mb-2 block text-sm font-semibold text-[var(--color-on-surface-variant)]">{label}</span>
       {children}
       {error ? <p className={errorClassName}>{error}</p> : null}
@@ -137,6 +146,6 @@ function getMinimumDateTime() {
 }
 
 const inputClassName =
-  "w-full rounded-2xl border border-transparent bg-[var(--color-surface-container-highest)] px-4 py-3 text-sm text-[var(--color-on-background)] shadow-none outline-none focus:border-[rgba(0,96,103,0.28)] focus:bg-white";
+  "block w-full min-w-0 max-w-full rounded-2xl border border-transparent bg-[var(--color-surface-container-highest)] px-4 py-3 text-sm text-[var(--color-on-background)] shadow-none outline-none focus:border-[rgba(0,96,103,0.28)] focus:bg-white";
 
 const errorClassName = "mt-2 text-sm font-medium text-red-700";

@@ -50,6 +50,7 @@ export const siteConfig = {
   phoneHref: "tel:+61 0416 914 666",
   phoneLabel: "+61 0420 551 613",
   email: "info@livoracare.com.au",
+  email1: "feedback@livoracare.com.au",
   suburb: "Melbourne, Victoria",
 };
 
@@ -322,7 +323,7 @@ export const legalPageContent: Record<
       {
         heading: "How to Contact Us",
         paragraphs: [
-          `If you prefer to speak with someone directly, you can contact Livora Care in Melbourne, Victoria by phone on ${siteConfig.phoneLabel} or by email at ${siteConfig.email}.`,
+          `If you prefer to speak with someone directly, you can contact Livora Care in Melbourne, Victoria by phone on ${siteConfig.phoneLabel} or by email at ${siteConfig.email1}.`,
           "You may also choose to submit feedback anonymously through our website contact pathway if you prefer not to identify yourself.",
         ],
       },
@@ -337,7 +338,7 @@ export const legalPageContent: Record<
         heading: "If You Are Not Satisfied With Our Response",
         paragraphs: [
           "If you are not comfortable raising your concern with Livora Care, or if you are not satisfied with our response, you may contact the NDIS Quality and Safeguards Commission.",
-          "NDIS Commission phone: 1800 035 544. Website: www.ndiscommission.gov.au.",
+          "NDIS Commission phone: 1800 035 544. Website: https://www.ndiscommission.gov.au/complaints/report.",
           "Livora Care promotes a speak-up culture where participants feel safe to raise concerns without fear of retaliation.",
         ],
       },

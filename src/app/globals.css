@@ -67,6 +67,10 @@ select {
   outline-offset: 2px;
 }
 
+.datetime-empty::-webkit-datetime-edit {
+  color: transparent;
+}
+
 .font-headline {
   font-family: var(--font-headline);
 }
