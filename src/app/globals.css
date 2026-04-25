@@ -71,6 +71,21 @@ select {
   color: transparent;
 }
 
+.consultation-datetime {
+  appearance: none;
+  inline-size: 100%;
+  min-inline-size: 0;
+}
+
+.consultation-datetime::-webkit-date-and-time-value {
+  min-inline-size: 0;
+  text-align: left;
+}
+
+.consultation-datetime::-webkit-calendar-picker-indicator {
+  margin-inline-start: 0;
+}
+
 .font-headline {
   font-family: var(--font-headline);
 }

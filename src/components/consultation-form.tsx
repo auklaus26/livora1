@@ -66,8 +66,8 @@ export function ConsultationForm() {
   }
 
   return (
-    <form className="grid gap-5" onSubmit={handleSubmit(onSubmit)} noValidate>
-      <div className="grid gap-5 md:grid-cols-2">
+    <form className="grid min-w-0 gap-5" onSubmit={handleSubmit(onSubmit)} noValidate>
+      <div className="grid min-w-0 gap-5 md:grid-cols-2">
         <Field label="Full name" error={errors.name?.message}>
           <input {...register("name")} className={inputClassName} autoComplete="name" />
         </Field>
@@ -76,16 +76,16 @@ export function ConsultationForm() {
         </Field>
       </div>
 
-      <div className="grid gap-5 md:grid-cols-2">
+      <div className="grid min-w-0 gap-5 md:grid-cols-2">
         <Field label="Phone number" error={errors.phone?.message}>
           <input type="tel" {...register("phone")} className={inputClassName} autoComplete="tel" />
         </Field>
         <Field label="Preferred time" error={errors.preferredTime?.message}>
-          <div className="relative">
+          <div className="relative w-full min-w-0 overflow-hidden rounded-2xl">
             <input
               type="datetime-local"
               {...register("preferredTime")}
-              className={`${inputClassName} ${preferredTimeValue ? "" : "datetime-empty"}`}
+              className={`${inputClassName} consultation-datetime ${preferredTimeValue ? "" : "datetime-empty"}`}
               min={getMinimumDateTime()}
             />
             {preferredTimeValue ? null : (
