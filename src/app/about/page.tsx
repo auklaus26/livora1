@@ -6,11 +6,13 @@ import { PageHero } from "@/components/page-hero";
 import { SectionHeading } from "@/components/section-heading";
 import { Shell } from "@/components/shell";
 import { ctaStrip, heroVisualLabels, valuePillars } from "@/lib/site-content";
+import { createPageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = createPageMetadata({
   title: "About Our Team",
   description: "Learn about Livora Care's multidisciplinary experience across healthcare, research, governance and disability support.",
-};
+  path: "/about",
+});
 
 export default function AboutPage() {
   return (

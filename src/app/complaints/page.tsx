@@ -1,7 +1,16 @@
+import type { Metadata } from "next";
+
 import { FeedbackForm } from "@/components/feedback-form";
 import { Shell } from "@/components/shell";
 import { legalPageContent } from "@/lib/site-content";
 import { LegalContent } from "@/app/shared/legal-content";
+import { createPageMetadata } from "@/lib/seo";
+
+export const metadata: Metadata = createPageMetadata({
+  title: "Complaints and Feedback",
+  description: "Share feedback, complaints or suggestions with Livora Care and learn how concerns are handled.",
+  path: "/complaints",
+});
 
 export default function ComplaintsPage() {
   return (

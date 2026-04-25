@@ -8,11 +8,13 @@ import { SectionHeading } from "@/components/section-heading";
 import { Shell } from "@/components/shell";
 import { WeheartNdisLogo } from "@/components/weheart-ndis-logo";
 import { ctaStrip, heroVisualLabels, referralSteps, silSupports } from "@/lib/site-content";
+import { createPageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = createPageMetadata({
   title: "Supported Independent Living in Melbourne",
   description: "Person-centred Supported Independent Living services in Melbourne designed to help NDIS participants live safely and independently.",
-};
+  path: "/services/sil",
+});
 
 export default function SilPage() {
   return (

@@ -6,11 +6,13 @@ import { PageHero } from "@/components/page-hero";
 import { SectionHeading } from "@/components/section-heading";
 import { Shell } from "@/components/shell";
 import { contactFaqs, heroVisualLabels, quickContact, siteConfig } from "@/lib/site-content";
+import { createPageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = createPageMetadata({
   title: "Contact",
   description: "Contact Livora Care to discuss disability supports, referrals and service suitability in Melbourne.",
-};
+  path: "/contact",
+});
 
 export default function ContactPage() {
   return (

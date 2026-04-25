@@ -8,11 +8,13 @@ import { ProcessSteps } from "@/components/process-steps";
 import { SectionHeading } from "@/components/section-heading";
 import { Shell } from "@/components/shell";
 import { ctaStrip, heroVisualLabels, homeServices, referralSteps } from "@/lib/site-content";
+import { createPageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = createPageMetadata({
   title: "Referrers Hub",
   description: "Information for support coordinators, allied health professionals and community referrers working with Livora Care.",
-};
+  path: "/referrers",
+});
 
 export default function ReferrersPage() {
   return (

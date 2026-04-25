@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import { ArrowRight } from "lucide-react";
 
 import { ButtonLink } from "@/components/button-link";
@@ -9,6 +10,13 @@ import { Shell } from "@/components/shell";
 import { StatStrip } from "@/components/stat-strip";
 import { WeheartNdisLogo } from "@/components/weheart-ndis-logo";
 import { ctaStrip, differentiators, heroVisualLabels, homeServices, statHighlights } from "@/lib/site-content";
+import { createPageMetadata, defaultDescription } from "@/lib/seo";
+
+export const metadata: Metadata = createPageMetadata({
+  title: "Supported Independent Living & NDIS Disability Support Melbourne",
+  description: defaultDescription,
+  path: "/",
+});
 
 export default function HomePage() {
   return (

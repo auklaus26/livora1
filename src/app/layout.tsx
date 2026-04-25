@@ -4,20 +4,30 @@ import "./globals.css";
 import { PageBackground } from "@/components/page-background";
 import { SiteFooter } from "@/components/site-footer";
 import { SiteHeader } from "@/components/site-header";
+import { defaultDescription, siteName, siteUrl } from "@/lib/seo";
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://livoracare.com.au"),
+  metadataBase: new URL(siteUrl),
   title: {
     default: "Livora Care | Supported Independent Living & NDIS Disability Support Melbourne",
     template: "%s | Livora Care",
   },
-  description:
-    "Registered NDIS provider delivering Supported Independent Living and person-centred disability supports across Melbourne.",
+  description: defaultDescription,
+  applicationName: siteName,
+  alternates: {
+    canonical: "/",
+  },
   openGraph: {
-    title: "Livora Care",
-    description:
-      "Supported Independent Living and person-centred NDIS disability supports across Melbourne.",
+    title: siteName,
+    description: defaultDescription,
+    url: "/",
+    siteName,
     type: "website",
+    locale: "en_AU",
+  },
+  robots: {
+    index: true,
+    follow: true,
   },
 };
 

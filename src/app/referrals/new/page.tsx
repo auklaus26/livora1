@@ -5,11 +5,13 @@ import { ReferralForm } from "@/components/referral-form";
 import { SectionHeading } from "@/components/section-heading";
 import { Shell } from "@/components/shell";
 import { heroVisualLabels, quickContact, referralSteps } from "@/lib/site-content";
+import { createPageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = createPageMetadata({
   title: "Referral Form",
   description: "Make a referral to Livora Care for disability supports in Melbourne and share participant information for service review.",
-};
+  path: "/referrals/new",
+});
 
 export default function ReferralPage() {
   return (
