@@ -3,16 +3,15 @@
 import { usePathname } from "next/navigation";
 
 const backgroundPhotos = [
-  "/photos/iStock-2.jpg",
-  "/photos/iStock-5.jpg",
   "/photos/iStock-6.jpg",
+  "/photos/iStock-5.jpg",
   "/photos/iStock-7.jpg",
   "/photos/iStock-3.jpg",
 ];
 
 const routePhotoMap = [
   { route: "/", photo: backgroundPhotos[0] },
-  { route: "/contact", photo: backgroundPhotos[4] },
+  { route: "/contact", photo: backgroundPhotos[2] },
   { route: "/about", photo: backgroundPhotos[1] },
   { route: "/services/sil", photo: backgroundPhotos[2] },
   { route: "/referrers", photo: backgroundPhotos[3] },
