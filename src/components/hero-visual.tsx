@@ -26,7 +26,7 @@ export function HeroVisual({
       <div className="editorial-grid absolute inset-0 opacity-20" />
       <div className="relative flex min-h-[420px] flex-col justify-between">
         <div className="inline-flex w-fit rounded-full bg-white/18 px-4 py-2 text-xs font-semibold uppercase tracking-[0.24em] text-white backdrop-blur">
-          Editorial Empathy
+          Livora beyond care
         </div>
         <div className="space-y-4">
           {labels.map((label, index) => (

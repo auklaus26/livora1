@@ -33,7 +33,7 @@ function renderLinkedParagraph(paragraph: string) {
       <a
         key={`${part}-${index}`}
         href={href}
-        className="font-semibold text-[var(--color-primary)] underline underline-offset-4 transition hover:text-[var(--color-primary-fixed-dim)]"
+        className="font-semibold text-[var(--color-primary)] underline underline-offset-4 transition [overflow-wrap:anywhere] hover:text-[var(--color-primary-fixed-dim)]"
         {...(isExternalLink ? { target: "_blank", rel: "noreferrer" } : {})}
       >
         {part}
@@ -58,7 +58,9 @@ export function LegalContent({
               <div key={section.heading} className="space-y-4">
                 <h3 className="font-headline text-2xl font-bold text-[var(--color-on-background)]">{section.heading}</h3>
                 {section.paragraphs.map((paragraph) => (
-                  <p key={paragraph}>{renderLinkedParagraph(paragraph)}</p>
+                  <p key={paragraph} className="min-w-0">
+                    {renderLinkedParagraph(paragraph)}
+                  </p>
                 ))}
               </div>
             ))}
