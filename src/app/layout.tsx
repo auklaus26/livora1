@@ -4,6 +4,7 @@ import "./globals.css";
 import { PageBackground } from "@/components/page-background";
 import { SiteFooter } from "@/components/site-footer";
 import { SiteHeader } from "@/components/site-header";
+import { SiteNavigationSchema } from "@/components/site-navigation-schema";
 import { defaultDescription, siteName, siteUrl } from "@/lib/seo";
 
 export const metadata: Metadata = {
@@ -39,6 +40,7 @@ export default function RootLayout({
   return (
     <html lang="en" className="h-full scroll-smooth">
       <body className="min-h-full bg-[var(--color-background)] text-[var(--color-on-background)] antialiased">
+        <SiteNavigationSchema />
         <PageBackground />
         <div className="relative isolate z-10">
           <SiteHeader />

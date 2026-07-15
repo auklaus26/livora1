@@ -39,7 +39,7 @@ export function SiteHeader() {
             priority
           />
         </Link>
-        <nav className="hidden items-center gap-8 md:flex">
+        <nav aria-label="Primary navigation" className="hidden items-center gap-8 md:flex">
           {navItems.map((item) => {
             const isActive = isActivePath(item.href);
 
@@ -67,7 +67,7 @@ export function SiteHeader() {
             Menu
           </summary>
           <div className="absolute inset-x-4 top-20 rounded-[24px] bg-[var(--color-surface-container-lowest)] p-5 shadow-[var(--shadow-editorial)]">
-            <nav className="flex flex-col gap-4">
+            <nav aria-label="Mobile primary navigation" className="flex flex-col gap-4">
               {navItems.map((item) => {
                 const isActive = isActivePath(item.href);
 
