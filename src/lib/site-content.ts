@@ -52,6 +52,7 @@ export const siteConfig = {
   email: "info@livoracare.com.au",
   email1: "feedback@livoracare.com.au",
   suburb: "Melbourne, Victoria",
+  facebookUrl: "https://www.facebook.com/share/1DZdBxRR9R/?mibextid=wwXIfr",
 };
 
 export const navItems: NavItem[] = [
